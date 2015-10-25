@@ -6,17 +6,15 @@
   "scripts": {
     "compile": "babel --experimental --optional runtime -d lib/ src/",
     "prepublish": "npm run compile",
-
     "test": "mocha --require test/babelhook --reporter spec --compilers es6.js:babel/register",
-
     "test-travis": "node --harmony node_modules/istanbul-harmony/lib/cli.js cover _mocha --report lcovonly --hook-run-in-context -- --require test/babelhook --compilers es6.js:babel/register --reporter dot"
   },
-
   "author": "Oleg Dovger",
   "license": "ISC",
   "devDependencies": {
     "babel": "^5.8.29",
     "chai": "^3.4.0",
+    "istanbul-harmony": "^0.3.16",
     "mocha": "^2.3.3",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0"
